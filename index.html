@@ -1,0 +1,48 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>MixLingo 3D</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        html, body {
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background: #f8f8f8;
+            font-family: sans-serif;
+        }
+        #gameCanvas {
+            width: 100vw;
+            height: 100vh;
+        }
+        #startBtn {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            padding: 10px 20px;
+            font-size: 18px;
+            border-radius: 8px;
+            border: none;
+            background: #007bff;
+            color: white;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="gameCanvas"></div>
+    <button id="startBtn">Start MixLingo 3D</button>
+
+    <script type="module">
+        import { startMixLingo3D } from '../js/modes/mixlingo3d/mixlingo3d.js';
+        document.getElementById('startBtn').addEventListener('click', () => {
+            startMixLingo3D();
+            document.getElementById('startBtn').style.display = 'none';
+        });
+    </script>
+
+</body>
+</html>
